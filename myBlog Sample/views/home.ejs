@@ -1,0 +1,23 @@
+<%- include("partials/header"); -%>
+<h1>Home</h1>
+<p> <%= introHome %> </p>
+
+<!--<p>  </p>
+
+ for (let i = 0; i<keyPost.length; i++) { %> 
+   console.log (keyPost[i].TitleTxt);  
+ }   
+  Assuming we want to use a For Loop
+-->
+<% posts.forEach(post => { %>
+    
+    <h1><%= post.title %></h1>
+    <p> <%= post.content.substring(0,100) + "..." %>
+        <a href="/post/<%= post.title %>">Read More</a> 
+    </p>  
+  
+  <% }); %>
+
+
+
+<%- include("partials/footer"); -%>
